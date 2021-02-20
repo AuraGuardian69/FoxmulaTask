@@ -1,0 +1,20 @@
+{
+  "name": "foxmulatask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sass/custom.scss",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url sass/custom.scss css/main.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "bulma": "^0.9.2",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "bulma-popover": "^1.0.3"
+  }
+}

@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foxmula Task</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+
+<body>
+
+    <div class="columns">
+        <aside class="menu column is-one-fifth has-background-primary is-full-height fixed">
+
+            <ul class="menu-list media default-cursor my-3 mx-2">
+                <div class="media-left is-vcentered">
+                    <figure class="image is-32x32">
+                        <img class="is-rounded" src="assets/logo.png">
+                    </figure>
+
+                </div>
+                <div class="media-content">
+                    <strong class="is-size-6 has-text-white">Institute's or school's really really long name!</strong>
+                </div>
+            </ul>
+
+            <div class="navbar-divider"></div>
+
+            <ul class="menu-list">
+                <li><a> <i class="fas fa-users"></i> &nbsp; Batches</a></li>
+                <li><a> <i class="fas fa-user-friends"></i> &nbsp; Manage Staff</a></li>
+                <li><a> <i class="fas fa-receipt"></i> &nbsp; Fee Summary</a></li>
+                <li><a> <i class="fas fa-university"></i> &nbsp; Institute Profile</a></li>
+            </ul>
+
+            <div class="navbar-divider">
+
+            </div>
+
+            <ul class="menu-list">
+                <li><a> <i class="fas fa-comments"></i> &nbsp; Direct Messages</a></li>
+                <li><a> <i class="fas fa-at"></i> &nbsp; Mentions</a></li>
+                <li><a> <i class="fas fa-bookmark"></i> &nbsp; Bookmarked Items</a></li>
+            </ul>
+
+            <div class="navbar-divider">
+
+            </div>
+
+            <ul class="menu-list">
+                <li><a class="is-active">Departments</a></li>
+                <li>
+                    <ul id="allDepartments" class=" scrollable">
+                        <li><a>[[name]]</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </aside>
+
+        <div class="column is-offset-one-fifth">
+            <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <h1 class="navbar-item default-cursor is-size-4 no-select">
+                        <strong>
+                            Manage Staff
+                        </strong>
+                    </h1>
+
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                        data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div id="navbarBasicExample" class="navbar-menu">
+
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <div class="buttons">
+                                <a class="button is-rounded is-outlined is-dark">
+                                    <i class="fas fa-calendar"></i>
+                                </a>
+                                <figure class="image is-32x32 mx-2 my-2">
+                                    <img class="is-rounded" src="assets/me.jpeg">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="columns mt-3 ml-3">
+                <div class="column is-three-fifths">
+                    <p class="control has-icons-left">
+                        <input class="input is-rounded" type="text" placeholder="Search Batches">
+                        <span class="icon is-left">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </p>
+
+                </div>
+
+                <div class="column auto">
+                    <div class="control">
+                        <button class="button is-light" id="filter"><i class="fas fa-filter"></i>
+                            &nbsp;
+                            <strong>Filters</strong>
+                            &nbsp;
+                            <span class="tag is-success is-rounded is-small">12</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="column auto">
+                    <div class="control">
+                        <button class="button is-info is-outlined"><i class="fas fa-plus"></i> &nbsp;
+                            <strong>New
+                                Subject</strong></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="myBatches px-2">
+                <div class="navbar-divider"></div>
+                <h1 class="navbar-item default-cursor is-size-5">
+                    My Batches
+                </h1>
+
+                <div class="columns">
+                    <div class="column is-one-third">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Mathematics, 10th
+                                            CBSE <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Mathematics, 10th
+                                            CBSE <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Mathematics, 10th
+                                            CBSE <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="has-text-centered">
+                    <button class="button is-primary is-rounded"><strong>Show All</strong></button>
+
+                </div>
+
+            </div>
+
+            <div class="myBatches px-2">
+                <div class="navbar-divider"></div>
+                <h1 class="navbar-item default-cursor is-size-5">
+                    All Batches
+                </h1>
+
+                <div class="navbar-divider"></div>
+                <h1 class="navbar-item default-cursor is-size-6">
+                    Physics, 9th Std, CBSE &nbsp;
+                    <button class="button is-info is-small is-outlined"><strong><i class="fas fa-plus"></i> &nbsp; New
+                            Batch</strong></button>
+                </h1> <br> <br>
+
+                <div class="columns">
+                    <div class="column is-one-third">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="has-text-centered">
+                    <button class="button is-primary is-rounded"><strong>Show All</strong></button>
+
+                </div>
+
+            </div>
+
+            <div class="myBatches px-2">
+
+                <div class="navbar-divider"></div>
+                <h1 class="navbar-item default-cursor is-size-6">
+                    Physics, 9th Std, CBSE &nbsp;
+                    <button class="button is-info is-small is-outlined"><strong><i class="fas fa-plus"></i> &nbsp; New
+                            Batch</strong></button>
+                </h1> <br> <br>
+
+                <div class="columns">
+                    <div class="column is-one-third">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="has-text-centered">
+                    <button class="button is-primary is-rounded"><strong>Show All</strong></button>
+
+                </div>
+
+            </div>
+
+            <div class="myBatches px-2">
+
+                <div class="navbar-divider"></div>
+                <h1 class="navbar-item default-cursor is-size-6">
+                    Physics, 9th Std, CBSE &nbsp;
+                    <button class="button is-info is-small is-outlined"><strong><i class="fas fa-plus"></i> &nbsp; New
+                            Batch</strong></button>
+                </h1> <br> <br>
+
+                <div class="columns">
+                    <div class="column is-one-third">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+
+                    <div class="column auto">
+                        <div class="card relative default-cursor no-select">
+                            <div class="card-content">
+                                <div class="media">
+                                    <div class="media-content">
+                                        <p class="title is-6">Batch Name PHY 8B</p>
+                                        <p class="subtitle is-6"><i class="fas fa-book"></i> &nbsp; Marvin McKinney <br>
+                                            <i class="fas fa-user"></i> &nbsp;100 Students</p>
+
+                                        <p class="subtitle is-6">
+                                            Upcoming Class <br>
+                                            Thu, 25th May, <strong>12:00PM</strong>
+                                        </p>
+                                        <p class="subtitle">
+
+                                            <span class="tag is-info is-rounded is-small">Mon</span>
+                                            <span class="tag is-info is-rounded is-small">Tue</span>
+                                            <span class="tag is-light is-rounded is-small">Wed</span>
+                                            <span class="tag is-info is-rounded is-small">Thu</span>
+                                            <span class="tag is-light is-rounded is-small">Fri</span>
+                                            <span class="tag is-light is-rounded is-small">Sat</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="tag is-rounded is-large is-danger move-tag">12</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="has-text-centered">
+                    <button class="button is-primary is-rounded"><strong>Show All</strong></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.miranda.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+    <script>
+        // Getting departments from an array in JSON format
+        var departmentData = [{
+            "id": 0,
+            "name": "Physics 10th"
+        }, {
+            "id": 1,
+            "name": "Computer Science"
+        }, {
+            "id": 2,
+            "name": "Compiler Design"
+        }, {
+            "id": 3,
+            "name": "Operating Systems"
+        }, {
+            "id": 4,
+            "name": "Computer Networking"
+        }, {
+            "id": 5,
+            "name": "Data Structures"
+        }, {
+            "id": 6,
+            "name": "Dynamic Programming"
+        }, {
+            "id": 7,
+            "name": "Advanced Algorithms"
+        }, {
+            "id": 8,
+            "name": "Network Security"
+        }];
+        $("#allDepartments").mirandajs(departmentData);
+    </script>
+</body>
+
+</html>

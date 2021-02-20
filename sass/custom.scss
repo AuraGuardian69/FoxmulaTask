@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+$primary: #3F0E40;
+$menu-item-color: #ffffff;
+$menu-item-hover-color: #3F0E40;
+$menu-item-active-color: #ffffff;
+$menu-item-active-background-color: #250025;
+$card-background-color: #F6F6F6;
+
+
+@import "../node_modules/bulma/bulma.sass";
+
+.is-full-height {
+    min-height: 100vh !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    border-left: 1px solid transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #250025;
+}
+
+::selection {
+    background: #3F0E40;
+    color: #ffffff;
+}
+
+.default-cursor {
+    cursor: default;
+}
+
+.scrollable {
+    overflow-y: auto;
+    position: relative;
+    height: 35vh;
+}
+
+.to-right {
+    float: right;
+    width: 100vw;
+}
+
+.fixed {
+    position: fixed;
+
+}
+
+.relative {
+    position: relative;
+}
+
+.move-tag {
+    position: absolute;
+    top: -20px;
+    right: 0px;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.block {
+    display: block;
+}
+
+.move-right {
+    float: right;
+}
